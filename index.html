@@ -2,439 +2,322 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <title>Hotel Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
-    referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luxe Haven Hotel Resort</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header class="header" id="navigation-menu">
-    <div class="container">
-      <nav>
-        <a href="#" class="logo"> <img src="image/logo.png" alt=""> </a>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><img src="image/logo.png" alt="Luxe Haven Hotel Logo"></a>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#rooms" class="nav-link">Rooms</a></li>
+                    <li><a href="#restaurant" class="nav-link">Restaurant</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-        <ul class="nav-menu">
-          <li> <a href="#home" class="nav-link">Home</a> </li>
-          <li> <a href="#about" class="nav-link">About</a> </li>
-          <li> <a href="#rooms" class="nav-link">Rooms</a> </li>
-          <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
-          <li> <a href="#gallery" class="nav-link">Gallery</a> </li>
-          <li> <a href="#contact" class="nav-link">Contact</a> </li>
-        </ul>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
 
-        <div class="hambuger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <script>
-    const hambuger = document.querySelector('.hambuger');
-    const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener("click", mobileMenu);
 
-    hambuger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-      hambuger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    }
-
-    const navLink = document.querySelectorAll('.nav-link');
-    navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-    function closeMenu() {
-      hambuger.classList.remove("active");
-      navMenu.classList.remove("active");
-    }
-  </script>
-
-  <section class="home" id="home">
-    <div class="head_container">
-      <div class="box">
-        <div class="text">
-          <h1>Hello.Salut.Hola</h1>
-          <p>Discover a world of refined luxury and comfort with us. Whether you're here for business or leisure, we provide an experience tailored to meet your every need. From elegant accommodations to exclusive amenities, let us make your stay memorable in every way.</p>
-          <button>MORE INFO</button>
-        </div>
-      </div>
-      <div class="image">
-        <img src="image/home1.jpg" class="slide">
-      </div>
-      <div class="image_item">
-        <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
-        <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg')">
-        <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
-        <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg')">
-      </div>
-    </div>
-  </section>
-  <script>
-    function img(anything) {
-      document.querySelector('.slide').src = anything;
-    }
-
-    function change(change) {
-      const line = document.querySelector('.image');
-      line.style.background = change;
-    }
-  </script>
-  <section class="book">
-    <div class="container flex">
-      <div class="input grid">
-        <div class="box">
-          <label>Check-in:</label>
-          <input type="date" placeholder="Check-in-Date">
-        </div>
-        <div class="box">
-          <label>Check-out:</label>
-          <input type="date" placeholder="Check-out-Date">
-        </div>
-        <div class="box">
-          <label>Adults:</label> <br>
-          <input type="number" placeholder="0">
-        </div>
-        <div class="box">
-          <label>Children:</label> <br>
-          <input type="number" placeholder="0">
-        </div>
-      </div>
-      <div class="search">
-        <input type="submit" value="SEARCH">
-      </div>
-    </div>
-  </section>
-  <section class="about top" id="about">
-    <div class="container flex">
-      <div class="left">
-        <div class="img">
-          <img src="image/a1.jpg" alt="" class="image1">
-          <img src="image/a2.jpg" alt="" class="image2">
-        </div>
-      </div>
-      <div class="right">
-        <div class="heading">
-          <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
-          <h2>Welcome to Luxe Haven Hotel Resort</h2>
-          <p>At Luxe Haven Hotel Resort, we redefine the meaning of luxury and comfort. Our meticulously designed spaces offer an exquisite blend of elegance and tranquility, ensuring a memorable stay for every guest.</p>
-          <p>Indulge in our world-class amenities, including a state-of-the-art spa, gourmet dining options, and breathtaking views that create a perfect backdrop for relaxation. Experience unparalleled service from our dedicated staff, committed to making your stay extraordinary.</p>
-          <button class="btn1">READ MORE</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="wrapper top">
-    <div class="container">
-      <div class="text">
-        <h2>Our Amenities</h2>
-        <p>At Luxe Haven Hotel Resort, we offer exceptional amenities to enhance your stay. From relaxation to adventure, our top-notch facilities cater to all your needs, ensuring a perfect blend of comfort and luxury.</p>
-
-
-        <div class="content">
-          <div class="box flex">
-            <i class="fas fa-swimming-pool"></i>
-            <span>Swimming pool</span>
-          </div>
-          <div class="box flex">
-            <i class="fas fa-dumbbell"></i>
-            <span>Gym & yogo</span>
-          </div>
-          <div class="box flex">
-            <i class="fas fa-spa"></i>
-            <span>Spa & massage</span>
-          </div>
-          <div class="box flex">
-            <i class="fas fa-ship"></i>
-            <span>Boat Tours</span>
-          </div>
-          <div class="box flex">
-            <i class="fas fa-swimmer"></i>
-            <span>Surfing Lessons</span>
-          </div>
-          <div class="box flex">
-            <i class="fas fa-microphone"></i>
-            <span>Conference room</span>
-          </div>
-          <div class="box flex">
-            <i class="fas fa-water"></i>
-            <span>Diving & Swimming</span>
-          </div>
-          <div class="box flex">
-            <i class="fas fa-umbrella-beach"></i>
-            <span>Private Beach</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="room top" id="room">
-    <div class="container">
-      <div class="heading_top flex1">
-        <div class="heading">
-          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
-          <h2>Rooms & Suites</h2>
-        </div>
-        <div class="button">
-          <button class="btn1">VIEW ALL</button>
-        </div>
-      </div>
-
-      <div class="content grid">
-        <div class="box">
-          <div class="img">
-            <img src="image/r1.jpg" alt="">
-          </div>
-          <div class="text">
-            <h3>Superior Soble Rooms</h3>
-            <p> <span>$</span>129 <span>/per night</span> </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="image/r2.jpg" alt="">
-          </div>
-          <div class="text">
-            <h3>Superior Soble Rooms</h3>
-            <p> <span>$</span>129 <span>/per night</span> </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img">
-            <img src="image/r3.jpg" alt="">
-          </div>
-          <div class="text">
-            <h3>Superior Soble Rooms</h3>
-            <p> <span>$</span>129 <span>/per night</span> </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="wrapper wrapper2 top">
-    <div class="container">
-      <div class="text">
-        <div class="heading">
-          <h5>AT THE HEART OF COMMUNICATION</h5>
-          <h2>People Say</h2>
-        </div>
-
-        <div class="para">
-          <p>Guests rave about their experiences at Luxe Haven Hotel Resort, praising the outstanding service and luxurious amenities. From relaxing by the pool to indulging in spa treatments, they leave with unforgettable memories and a desire to return.</p>
-
-          <div class="box flex">
-            <div class="img">
-              <img src="image/c.jpg" alt="">
-            </div>
-            <div class="name">
-              <h5>Kim Aera</h5>
-              <h5>Special Guest</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="restaurant top" id="restaurant">
-    <div class="container flex">
-      <div class="left">
-        <img src="image/re.jpg" alt="">
-      </div>
-      <div class="right">
-        <div class="text">
-          <h2>Our Restaurant</h2>
-          <p>Welcome to Luxe Haven Hotel Resort’s dining experience, where culinary excellence meets elegance. Our restaurant offers a diverse menu that celebrates global flavors, crafted with the finest ingredients to ensure an unforgettable dining experience for every guest. Whether you’re enjoying a casual meal or celebrating a special occasion, our ambiance and service will make your dining experience exceptional.</p>
-        </div>
-        <div class="accordionWrapper">
-          <div class="accordionItem open">
-            <h2 class="accordionIHeading">Italian Kitchen</h2>
-            <div class="accordionItemContent">
-              <p>Discover the authentic flavors of Italy with our exquisite Italian dishes, crafted with fresh ingredients and traditional recipes. Indulge in a culinary experience that transports you to the heart of Italy.</p>
-              </p>
-            </div>
-          </div>
-          <div class="accordionItem close">
-            <h2 class="accordionIHeading">Mexican Kitchen</h2>
-            <div class="accordionItemContent">
-              <p>Experience the vibrant taste of Mexico with our delicious Mexican cuisine. From spicy tacos to flavorful enchiladas, each dish is prepared to give you a taste of the rich culinary heritage of Mexico.</p>
-              </p>
-            </div>
-          </div>
-          <div class="accordionItem close">
-            <h2 class="accordionIHeading">Asian Fusion</h2>
-            <div class="accordionItemContent">
-               <p>Enjoy a unique blend of flavors from across Asia, featuring sushi, stir-fry, and other delicacies that highlight the diversity of Asian cuisine. A perfect choice for those seeking an exciting dining experience.</p>
-              </p>
-            </div>
-          </div>
-          <div class="accordionItem close">
-            <h2 class="accordionIHeading">Mediterranean Delights</h2>
-            <div class="accordionItemContent">
-              <p>Delight in the fresh and healthy offerings of the Mediterranean with our selection of dishes featuring grilled meats, seafood, and seasonal vegetables, paired with exquisite sauces and spices.</p>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script>
-    var accItem = document.getElementsByClassName('accordionItem');
-    var accHD = document.getElementsByClassName('accordionIHeading');
-
-    for (i = 0; i < accHD.length; i++) {
-      accHD[i].addEventListener('click', toggleItem, false);
-    }
-
-    function toggleItem() {
-      var itemClass = this.parentNode.className;
-      for (var i = 0; i < accItem.length; i++) {
-        accItem[i].className = 'accordionItem close';
-      }
-      if (itemClass == 'accordionItem close') {
-        this.parentNode.className = 'accordionItem open';
-      }
-    }
-  </script>
-
-
-
-  <section class="gallary mtop " id="gallary">
-    <div class="container">
-      <div class="heading_top flex1">
-        <div class="heading">
-          <h5>WELCOME TO OUR PHOTO GALLERY</h5>
-          <h2>Photo Gallery of Our Hotel</h2>
-        </div>
-        <div class="button">
-          <button class="btn1">VIEW GALLERY</button>
-        </div>
-      </div>
-
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="image/g1.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g2.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g3.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g4.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g5.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g6.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g7.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="image/g8.jpg" alt="">
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      dots: false,
-      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 2
-        },
-        1000: {
-          items: 4
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
         }
-      }
-    })
-  </script>
 
+        const navLink = document.querySelectorAll('.nav-link');
+        navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
 
-<section class="map top">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23619.17274093485!2d25.432346!3d36.393151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgr!4v1637755481449!5m2!1sen!2sgr"
-    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</section>
-
-
-
-  <footer>
-    <div class="container grid top">
-      <div class="box">
-        <p>At Luxe Haven Hotel Resort, your comfort is our priority. Our dedicated team ensures your stay is memorable and enjoyable.</p>
-        <p>Accepted payment methods</p>
-        <div class="payment grid">
-          <img src="https://img.icons8.com/color/48/000000/visa.png" />
-          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
-          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
-          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+    <section class="home" id="home">
+        <div class="head_container">
+            <div class="box">
+                <div class="text">
+                    <h1>Hello. Salut. Hola.</h1>
+                    <p>Discover a world of refined luxury and comfort with us. Whether you're here for business or leisure, we provide an experience tailored to meet your every need. From elegant accommodations to exclusive amenities, let us make your stay memorable in every way.</p>
+                    <button>MORE INFO</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="image/home1.jpg" class="slide" alt="Hotel Interior">
+            </div>
+            <div class="image_item">
+                <img src="image/home1.jpg" alt="Home Image 1" class="slide active" onclick="changeImage('image/home1.jpg')">
+                <img src="image/home2.jpg" alt="Home Image 2" class="slide" onclick="changeImage('image/home2.jpg')">
+                <img src="image/home3.jpg" alt="Home Image 3" class="slide" onclick="changeImage('image/home3.jpg')">
+                <img src="image/home4.jpg" alt="Home Image 4" class="slide" onclick="changeImage('image/home4.jpg')">
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="box">
-        <h3>Recent News</h3>
+    <script>
+        function changeImage(imageSrc) {
+            document.querySelector('.slide').src = imageSrc;
+        }
+    </script>
 
-        <ul>
-          <li>Our Secret Island Boat Tour Is Just for You</li>
-          <li>Chill and Escape in Our Natural Shelters</li>
-          <li>September in  Luxe Haven Hotel</li>
-          <li>Live Music Concerts at  Luxe Haven</li>
-        </ul>
-      </div>
+    <section class="book">
+        <div class="container flex">
+            <div class="input grid">
+                <div class="box">
+                    <label for="checkin">Check-in:</label>
+                    <input type="date" id="checkin" placeholder="Check-in Date">
+                </div>
+                <div class="box">
+                    <label for="checkout">Check-out:</label>
+                    <input type="date" id="checkout" placeholder="Check-out Date">
+                </div>
+                <div class="box">
+                    <label for="adults">Adults:</label>
+                    <input type="number" id="adults" placeholder="0">
+                </div>
+                <div class="box">
+                    <label for="children">Children:</label>
+                    <input type="number" id="children" placeholder="0">
+                </div>
+            </div>
+            <div class="search">
+                <input type="submit" value="SEARCH">
+            </div>
+        </div>
+    </section>
 
-      <div class="box">
-        <h3>For Customers</h3>
-        <ul>
-          <li>About  Luxe Haven</li>
-          <li>Customer Care/Help</li>
-          <li>Corporate Accounts</li>
-          <li>Financial Information</li>
-          <li>Terms & Conditions</li>
-        </ul>
-      </div>
+    <section class="about top" id="about">
+        <div class="container flex">
+            <div class="left">
+                <div class="img">
+                    <img src="image/a1.jpg" alt="About Image 1" class="image1">
+                    <img src="image/a2.jpg" alt="About Image 2" class="image2">
+                </div>
+            </div>
+            <div class="right">
+                <div class="heading">
+                    <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+                    <h2>Welcome to Luxe Haven Hotel Resort</h2>
+                    <p>At Luxe Haven Hotel Resort, we redefine the meaning of luxury and comfort. Our meticulously designed spaces offer an exquisite blend of elegance and tranquility, ensuring a memorable stay for every guest.</p>
+                    <p>Indulge in our world-class amenities, including a state-of-the-art spa, gourmet dining options, and breathtaking views that create a perfect backdrop for relaxation. Experience unparalleled service from our dedicated staff, committed to making your stay extraordinary.</p>
+                    <button class="btn1">READ MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="box">
-        <h3>Contact Us</h3>
+    <section class="wrapper top">
+        <div class="container">
+            <div class="text">
+                <h2>Our Amenities</h2>
+                <p>At Luxe Haven Hotel Resort, we offer exceptional amenities to enhance your stay. From relaxation to adventure, our top-notch facilities cater to all your needs, ensuring a perfect blend of comfort and luxury.</p>
 
-        <ul>
-          <li>3015 Grand Ave, Cocount Grove, Merrick Way FL 123456</li>
-          <li><i class="far fa-envelope"></i>luxehaven@gmail.com </li>
-          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
-          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
-          <li><i class="far fa-comments"></i>24/ 7 Customer Services </li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+                <div class="content">
+                    <div class="box flex">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Swimming Pool</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Gym & Yoga</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-spa"></i>
+                        <span>Spa & Massage</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-ship"></i>
+                        <span>Boat Tours</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-swimmer"></i>
+                        <span>Surfing Lessons</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-microphone"></i>
+                        <span>Conference Room</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-water"></i>
+                        <span>Diving & Swimming</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>Private Beach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="room top" id="rooms">
+        <div class="container">
+            <div class="heading_top flex1">
+                <h2>Our Rooms</h2>
+                <p>Explore our luxurious rooms designed for your utmost comfort. Each room is equipped with modern amenities, providing a serene escape for guests seeking relaxation and rejuvenation.</p>
+            </div>
+            <div class="room_container">
+                <div class="room_card">
+                    <img src="image/room1.jpg" alt="Room Type 1">
+                    <h4>Deluxe Room</h4>
+                    <p>A cozy haven with modern amenities and beautiful views.</p>
+                    <span>$150/night</span>
+                    <button>BOOK NOW</button>
+                </div>
+                <div class="room_card">
+                    <img src="image/room2.jpg" alt="Room Type 2">
+                    <h4>Luxury Suite</h4>
+                    <p>Experience unparalleled comfort in our spacious luxury suite.</p>
+                    <span>$250/night</span>
+                    <button>BOOK NOW</button>
+                </div>
+                <div class="room_card">
+                    <img src="image/room3.jpg" alt="Room Type 3">
+                    <h4>Presidential Suite</h4>
+                    <p>Indulge in the ultimate luxury with stunning views and exquisite furnishings.</p>
+                    <span>$400/night</span>
+                    <button>BOOK NOW</button>
+                </div>
+                <div class="room_card">
+                    <img src="image/room4.jpg" alt="Room Type 4">
+                    <h4>Family Room</h4>
+                    <p>Spacious and comfortable, perfect for families seeking adventure.</p>
+                    <span>$200/night</span>
+                    <button>BOOK NOW</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="restaurant top" id="restaurant">
+        <div class="container">
+            <div class="heading_top flex1">
+                <h2>Our Restaurant</h2>
+                <p>Experience culinary delights crafted by our renowned chefs. Our restaurant offers a diverse menu featuring both local and international dishes, all prepared with fresh ingredients.</p>
+            </div>
+            <div class="restaurant_container">
+                <div class="restaurant_card">
+                    <img src="image/restaurant1.jpg" alt="Restaurant Dish 1">
+                    <h4>Gourmet Seafood</h4>
+                    <p>Savor the taste of the ocean with our gourmet seafood selection.</p>
+                </div>
+                <div class="restaurant_card">
+                    <img src="image/restaurant2.jpg" alt="Restaurant Dish 2">
+                    <h4>Italian Cuisine</h4>
+                    <p>Indulge in traditional Italian flavors with our handmade pasta dishes.</p>
+                </div>
+                <div class="restaurant_card">
+                    <img src="image/restaurant3.jpg" alt="Restaurant Dish 3">
+                    <h4>Asian Fusion</h4>
+                    <p>Experience a unique blend of flavors with our Asian fusion offerings.</p>
+                </div>
+                <div class="restaurant_card">
+                    <img src="image/restaurant4.jpg" alt="Restaurant Dish 4">
+                    <h4>Vegan Delights</h4>
+                    <p>Discover our range of delicious vegan options made from fresh ingredients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery top" id="gallery">
+        <div class="container">
+            <div class="heading_top flex1">
+                <h2>Gallery</h2>
+                <p>Take a glimpse into our luxurious hotel and the unforgettable experiences we offer. Explore our gallery to see the beauty of Luxe Haven Hotel Resort.</p>
+            </div>
+            <div class="gallery_container">
+                <div class="gallery_card">
+                    <img src="image/gallery1.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="gallery_card">
+                    <img src="image/gallery2.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="gallery_card">
+                    <img src="image/gallery3.jpg" alt="Gallery Image 3">
+                </div>
+                <div class="gallery_card">
+                    <img src="image/gallery4.jpg" alt="Gallery Image 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact top" id="contact">
+        <div class="container">
+            <div class="heading_top flex1">
+                <h2>Contact Us</h2>
+                <p>We would love to hear from you! Whether you have a question, a request, or need assistance, please feel free to reach out.</p>
+            </div>
+            <form action="#">
+                <div class="flex">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" placeholder="Subject" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" value="SEND MESSAGE">
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content flex">
+                <div class="footer_section">
+                    <h4>About</h4>
+                    <p>At Luxe Haven Hotel Resort, we are dedicated to providing the highest level of service and luxury. Our mission is to create memorable experiences for every guest.</p>
+                </div>
+                <div class="footer_section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#restaurant">Restaurant</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer_section">
+                    <h4>Follow Us</h4>
+                    <div class="social_links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p>&copy; 2024 Luxe Haven Hotel Resort. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-Vp8LR7iL+L4ezPMIKNUSgV5h7+4H0MAtd9ReU1nCZHeJH8CzB72Rt/3nA94tJPyaQ06EY5TgT3E2l0yK5jDiDg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
